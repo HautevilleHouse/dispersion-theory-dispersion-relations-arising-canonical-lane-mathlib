@@ -1,0 +1,16 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.DispersionTheoryDispersionRelationsArisingCanonicalLaneLean.SMatrixPoles
+import HautevilleHouse.DispersionTheoryDispersionRelationsArisingCanonicalLaneLean.CrossingSymmetry
+import HautevilleHouse.DispersionTheoryDispersionRelationsArisingCanonicalLaneLean.DispersionRelationRepresentation
+
+namespace HautevilleHouse
+namespace DispersionTheoryDispersionRelationsArisingCanonicalLaneLean
+
+def ConstrainedDispersionRelationsClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_dispersion_relations_endgame (A : AdmissibleClass) : ConstrainedDispersionRelationsClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end DispersionTheoryDispersionRelationsArisingCanonicalLaneLean
+end HautevilleHouse
